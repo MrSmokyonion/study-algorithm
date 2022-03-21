@@ -23,11 +23,11 @@ void quick_sort(int *_data, int _start, int _end)
 
     while (i <= j) //키 값이 엇갈릴때까지 반복.
     {
-        while (i <= _end && _data[i] >= _data[key]) //(->) 키값보다 큰 값.
+        while (i <= _end && _data[i] <= _data[key]) //(->) 키값보다 큰 값.
         {
             i++;
         }
-        while (j > _start && _data[j] <= _data[key]) //(<-) 키값보다 작은 값.
+        while (j > _start && _data[j] >= _data[key]) //(<-) 키값보다 작은 값.
         {
             j--;
         }
