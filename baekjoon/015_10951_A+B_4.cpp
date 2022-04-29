@@ -2,10 +2,9 @@
 
 int main()
 {
-    while(true)
+    int a, b;
+    while(scanf("%d %d", &a, &b) != -1)
     {
-        int a, b;
-        scanf("%d %d", &a, &b);
         printf("%d\n", a+b);
     }
 
