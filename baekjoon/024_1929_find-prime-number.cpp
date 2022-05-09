@@ -1,22 +1,24 @@
-#include <cstdio>
+#include <iostream>
+using namespace std;
 
 int main()
 {
-    int m, n;
-    scanf("%d %d", &m, &n);
+    int m, n, arr[1000001] = {0};
+    cin >> m >> n;
+
+    for(int i = 2; i <= m; i++)
+    {
+        for(int j = 2; i*j <= m; j++)
+        {
+            arr[i*j] = 1;
+        }
+    }
 
     for(int i = m; i <= n; i++)
     {
-        for(int j = 2; j < i; j++)
+        if(arr[i] == 0)
         {
-            if(i%j == 0)
-            {
-                break;
-            }
-            else if(j == i-1)
-            {
-                printf("%d\n", i);
-            }
+            cout << i << endl;
         }
     }
 
