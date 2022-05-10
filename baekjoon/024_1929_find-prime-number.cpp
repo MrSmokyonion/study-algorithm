@@ -6,9 +6,9 @@ int main()
     int m, n, arr[1000001] = {0};
     cin >> m >> n;
 
-    for(int i = 2; i <= m; i++)
+    for(int i = 2; i <= n; i++)
     {
-        for(int j = 2; i*j <= m; j++)
+        for(int j = 2; i*j <= n; j++)
         {
             arr[i*j] = 1;
         }
